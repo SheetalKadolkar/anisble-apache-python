@@ -3,7 +3,16 @@
 This project demonstrates how to use **Ansible** to automate the installation of **Python** and **Apache Web Server** on remote host machines (AWS EC2).
 
 ---
-
+## 🛠️ Setup on Control Node (Ansible Server)
+---
+Run the following commands on the Ansible control machine:
+---
+sudo yum update -y
+---
+sudo yum install python3 pip tree ansible.noarch -y
+---
+cd /etc/ansible
+---
 ## 📁 Project Structure
 ---
 ├── ansible.cfg
