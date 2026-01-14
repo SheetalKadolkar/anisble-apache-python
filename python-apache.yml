@@ -1,0 +1,21 @@
+---
+- name: Install Python and Apache on host machine
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Install Python
+      yum:
+        name: python3
+        state: present
+
+    - name: Install Apache
+      yum:
+        name: httpd
+        state: present
+
+    - name: Start and enable Apache service
+      service:
+        name: httpd
+        state: started
+        enabled: yes
